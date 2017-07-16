@@ -1,0 +1,355 @@
+* {
+    font-family: 'Poiret One';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fefefe;
+    color: #212121;
+}
+
+body > header {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background: url(../imgs/developer.jpg) no-repeat center;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 30px 0;
+    padding-bottom: 40px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/********************
+
+       Portada
+
+********************/
+
+.overlay-header {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+header > h1 {
+    font-size: 8em;
+    position: absolute;
+    font-family: 'Unica One';
+    font-weight: 100;
+    top: 40%;
+    right: 70px;
+    z-index: 5;
+    text-shadow: 0 1px 3px #3f3f3f;
+    animation: titleAnimation 1s;
+}
+
+.title-quote {
+    font-size: 3em;
+    font-family: 'Oleo Script';
+    position: absolute;
+    text-align: right;
+    top: 55%;
+    right: 70px;
+    z-index: 5;
+    text-shadow: 0 1px 3px #3f3f3f;
+    animation: titlequoteAnimation 1.5s;
+}
+
+/********************
+
+    Navbar y Menú
+
+********************/
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    text-align: right;
+    background-color: rgba(250,250,250, 0.8);
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index:200;
+    box-shadow: 3px 2px 6px #454545;
+}
+
+.navbar-logo {
+    font-size: 1.9em;
+    font-family: 'Unica One';
+    color: #2196F3;
+    float: left;
+    margin-top: 0.75em;
+    text-align: center;
+    width: 30%;
+}
+
+.navbar-list {
+    float: right;
+    margin-right: 100px;
+}
+
+.navbar-list > .navbar-item {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #212121;
+    padding: 1.5em 0;
+    -webkit-transition: background-color 1s ease, color 1s ease;
+    -moz-transition: background-color 1s ease, color 1s ease;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.navbar-list > .navbar-item:hover {
+    background-color: #2196F3;
+    color: #fefefe;
+}
+
+.navbar-list > .navbar-item > a {
+    text-decoration: none;
+    padding: 1.5em;
+    color: inherit;
+    display: inline-block;   
+}
+
+.navbar > .progress {
+    height: 3px;
+    background-color: #1976D2;
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+}
+
+/********************
+
+     Contenido
+
+********************/
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/********************
+
+  Sobre mí con Video
+
+********************/
+
+.sobre-mi {
+    width: 100%;
+}
+
+.video-corporativo, .texto-corporativo {
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+
+.content {
+    width: fit-content;
+    margin: 6em auto;
+}
+
+video {
+    box-shadow: 0 0 8px 2px;
+    color: #212121;
+}
+
+.about-description {
+    padding: 0 30px;
+    font-size: 1.3em;
+    margin-top: 30px;
+    line-height: 1.5em;
+}
+
+/************************
+
+  Estudios y Experiencia
+
+*************************/
+
+.estudios, .experiencia{
+    clear: both;
+}
+
+.estudios-item > .flip-div, .work-item > figure {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.work-item > figure > img {
+    max-width: 100%;
+}
+
+.estudios-item > .flip > .flip-div > img {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.flip {
+    height: 250px;
+    position: relative;
+    margin: 10px;
+}
+
+.flip-div {
+    position: absolute;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 1s;
+}
+
+.back {
+    visibility: hidden;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.front {
+    border: 2px solid #1976D2;
+}
+
+.flip:hover .front {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);    
+}
+
+.flip:hover .back {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);    
+    visibility: visible;
+    border: 2px solid #1976D2;
+}
+
+.work-item > figure > img {
+    height: 150px;
+
+}
+
+.work-item figcaption,.estudios-item p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+/**************************
+
+ Utilidades de maquetación
+
+***************************/
+
+.section-reverse {
+    background-color: #1976D2;
+    color: #fefefe;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+.separador {
+    background-color: #1976D2;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.quote {
+    font-size: 2.7em;
+    font-weight: 100;
+    font-style: italic;
+    font-family: Oleo Script;
+}
+
+/********************
+
+      Contacto
+
+********************/
+
+.contact-info > ul {
+    line-height: 2em;
+    list-style: none;
+    font-size: 1.3em;
+    display: table-cell;
+}
+
+.contact-info > ul > li > i {
+    width: 30px;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    font-size: 1em;
+}
+
+.contact-form input[type=text],.contact-form input[type=email]{
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.contact-form textarea {
+    padding: 11px;
+}    
+
+.contact-form input[type=submit], .contact-form select {
+    padding: 10px 0;
+}
+
+/********************
+
+        Footer
+
+********************/
+
+footer {
+    background-color: #1976D2;
+    color: #212121;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/********************
+
+    Animaciones
+
+********************/
+
+@keyframes titleAnimation {
+    0% { top: -100%; }
+    100% { top: 40%;}
+}
+
+@keyframes titlequoteAnimation {
+    0% { right: -1000px; }
+    100% { right: 70px;}
+}
