@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>4nt0n10_kNc3l4</h1>        
         <p class="title-quote">Déjame construir tu hogar en Internet</p>
     </header>
@@ -23,40 +23,42 @@
     <nav class="navbar">
         <div class="navbar-logo">4nt0n10_kNc3l4</div>
         <ul class="navbar-list">
-            <li class="navbar-item active">
-                <a href>Inicio</a>
+            <li id="section1" class="navbar-item active">
+                <a href="#header">Inicio</a>
             </li>
-            <li class="navbar-item">
-                <a href>Quién soy</a>
+            <li id="section2" class="navbar-item">
+                <a href="#quien-soy">Quién soy</a>
             </li>
-            <li class="navbar-item">
-                <a href>Estudios</a>
+            <li id="section3" class="navbar-item">
+                <a href="#estudios">Estudios</a>
             </li>
-            <li class="navbar-item">
-                <a href>Experiencia</a>
+            <li id="section4" class="navbar-item">
+                <a href="#experiencia">Experiencia</a>
             </li>
-            <li class="navbar-item">
-                <a href>Sobre mí</a>
+            <li id="section5" class="navbar-item">
+                <a href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li id="section6" class="navbar-item">
+                <a href="#contacto">Contacto</a>
             </li>
         </ul>
         <div class="progress"></div>
     </nav>
 
     <main>        
-        <section class="sobre-mi">
+        <section id="quien-soy" class="quien-soy">
             <div class="row">
-                <div class="video-corporativo col-6">
+                <div class="mi-foto col-6">
                     <div class="content">
-                        <video controls width="480" height="240">
-                            <source src="./video/video.mp4" type="video/mp4">
-                            Tu navegador no implementa el elemento <code>video</code>.
-                        </video>
+                        <img src="./imgs/IMG_7203.jpg" alt="Foto de Antonio Cancela">
                     </div>
                 </div>
                 <div class="texto-corporativo col-6">
                     <div class="content">
                         <h2 class="text-left">¿Quién soy?</h2>
-                        <p class="about-description">Me declaro feminista, ecologista, proanimalista y prolibertad. Me considero humilde aunque todos metemos la pata en algún momento. Eterno aprendiz. Profesionalmente comprometido y apasionado por ir un paso más allá. Buen compañero y amigo, divertido, creativo y perfeccionista.</p>
+                        <p class="about-description">Mi nombre es Antonio Cancela. Me dedico al desarrollo de software y soy especialista en Desarrollo Web. También soy investigador en la Universidad de Sevilla en la rama de Business Process Management dentro de la Ingeniería del Software.</p>
+                        <p class="about-description">Me apasiona el emprendimiento y soy entusiasta con los nuevos proyectos. Creo en el trabajo en equipo y en crear un buen ambiente de trabajo como impulsor de la excelencia, así como las buenas relaciones laborales y la empatía hacia el resto del equipo.</p>
+                        <p class="about-description">Soy ambicioso, perfeccionista y tengo afán de superación. Valoro la libertad y el respeto por encima de todo y me mata la injusticia y la hipocresía.</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +66,7 @@
         <div class="separador section-reverse">
             <h1 class="quote">Encuentra un trabajo que ames y no tendrás que volver a trabajar un solo día</h1>
         </div>
-        <section class="estudios">
+        <section id="estudios" class="estudios">
             <div class="row">
                 <h2 class="text-center">Estudios</h2>
                 <div class="col-4 estudios-item">
@@ -74,7 +76,7 @@
                         </div>
                         <div class="back flip-div">
                             <p>
-                                Estudié Ingeniería Informática en el plan de estudios anterior a Bolonia, con una duración de 5 años. Equivale al Grado + Master en Ingeniería del Software.
+                                Estoy realizando el Full Stack Developer Bootcamp de Keepcoding donde aprendemos en profundidad tecnologías para Frontend y Backend como el Stack MEAN o Django y Python.
                             </p>
                         </div>
                     </div> 
@@ -86,7 +88,7 @@
                         </div>
                         <div class="back flip-div">
                             <p>
-                                Estudié Ingeniería Informática en el plan de estudios anterior a Bolonia, con una duración de 5 años. Equivale al Grado + Master en Ingeniería del Software.
+                                Realicé entre los meses de Marzo y Junio de 2017 el curso Más Clientes Más Ingresos de Laura Ribas sobre Marketing y Ventas.
                             </p>
                         </div>
                     </div> 
@@ -105,7 +107,7 @@
                 </div>
             </div>
         </section>
-        <section class="experiencia section-reverse">
+        <section id="experiencia" class="experiencia section-reverse">
             <div class="row">
                 <h2 class="text-center">Experiencia</h2>
                 <div class="col-3 work-item">
@@ -142,9 +144,31 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section id="sobre-mi" class="sobre-mi">
+            <div class="row">
+                <div class="video-corporativo col-6">
+                    <div class="content">
+                        <video id="video-corp" controls width="480" height="240">
+                            <source src="./video/video.mp4" type="video/mp4">
+                            Tu navegador no implementa el elemento <code>video</code>.
+                        </video>
+                    </div>
+                </div>
+                <div class="texto-corporativo col-6">
+                    <div class="content">
+                        <h2 class="text-left">Sobre mí</h2>
+                        <p class="about-description">Me declaro feminista, ecologista, proanimalista y prolibertad. Me considero humilde aunque todos metemos la pata en algún momento. Eterno aprendiz. Profesionalmente comprometido y apasionado por ir un paso más allá. Buen compañero y amigo, divertido, creativo y perfeccionista.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separador section-reverse">
+            <h1 class="quote">Tanto si piensas que puedes, como si piensas que no puedes, estás en lo cierto</h1>
+        </div>
+        <section id="contacto" class="contact">
             <div class="row">
                 <div class="col-6">
+                    <h2>¿Tienes alguna duda o consulta? ¡Contacta conmigo!</h2>
                     <div class="contact-info">
                         <ul>
                             <li><i class="fa fa-phone"></i> 722 107 152</li>
@@ -157,17 +181,18 @@
                 <div class="col-6">
                     <div class="contact-form">
                         <form action="" method="POST">
-                            <input type="text" name="nombre" placeholder="Tú nombre">
-                            <input type="email" name="email" placeholder="email@empresa.com" pattern="[a-zA-Z0-9\.\-\_]+@[a-zA-Z0-9\.\-\_]+\.(com|es|org|net|info|biz|io)">
-                            <select>
+                            <input type="text" name="nombre" required placeholder="Tú nombre">
+                            <input type="email" name="email" required placeholder="email@empresa.com" pattern="[a-zA-Z0-9\.\-\_]+@[a-zA-Z0-9\.\-\_]+\.(com|es|org|net|info|biz|io)">
+                            <select onchange="muestraInput(this.value)">
                                 <option disabled>¿Cómo me has conocido?</option>
                                 <option value="amigo">A través de un amigo</option>
                                 <option value="google">Buscando en Google</option>
                                 <option value="rrss">Desde las redes sociales</option>
-                                <option value="otros" onselect="muestraInput()">Otros</option>
+                                <option value="otros">Otros</option>
                             </select>
                             <input type="text" name"telf" placeholder="654 321 098" pattern="(\+34( )*)?[6789]([0-9 ]){8,12}">
-                            <textarea name="" id="" cols="30" rows="10">Escribe aquí tu mensaje</textarea>
+                            <textarea name="mensaje" id="msg" cols="30" rows="10">Escribe aquí tu mensaje</textarea>
+                            <p>Te quedan <b id="quedanPalabras">150</b> palabras</p>
                             <input type="submit" value="Enviar">
                         </form>
                     </div>
@@ -179,5 +204,9 @@
     <footer>
        <p class="foot">Antonio Cancela Díaz &copy; Phupha. Todos los derechos reservados</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./js/javascript.js"></script>
+    <script src="./js/full-screen.js"></script>
 </body>
 </html>
