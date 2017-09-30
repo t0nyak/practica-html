@@ -40,6 +40,28 @@ $(document).ready(function () {
             $(this).parent().addClass('active');
         } // End if
     });
+    $("form").on('submit', function (event) {
+        var nombre = $("#nombre")[0];
+        var email = $('#email')[0];
+        var phone = $('#telf')[0];
+        var conocido = $('#conocido');
+        var comentario = $('#msg').val();
+        var palabras = comentario.split(" ").length;
+        if(palabras > 150){            
+            event.preventDefault();
+            alert("El mensaje no puede contener más de 150 palabras");
+        }
+
+        sendData({
+            'name': nombre.value,
+            'email': email.value,
+            'phone': telf.value,
+            'conocido': conocido.val(),
+            'comentarios': comentario
+        });
+
+        
+    });
 });
 
 $(document).on('scroll', function () {
@@ -84,4 +106,3 @@ $('#msg').on('keydown', function () {
     var resto = 150 - palabras.length;
     $('#quedanPalabras').text(resto);
 });
-

@@ -181,16 +181,16 @@
                 <div class="col-6">
                     <div class="contact-form">
                         <form action="" method="POST">
-                            <input type="text" name="nombre" required placeholder="Tú nombre">
-                            <input type="email" name="email" required placeholder="email@empresa.com" pattern="[a-zA-Z0-9\.\-\_]+@[a-zA-Z0-9\.\-\_]+\.(com|es|org|net|info|biz|io)">
-                            <select onchange="muestraInput(this.value)">
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tú nombre">
+                            <input type="email" id="email" name="email" required placeholder="email@empresa.com" pattern="[a-zA-Z0-9\.\-\_]+@[a-zA-Z0-9\.\-\_]+\.(com|es|org|net|info|biz|io)">
+                            <select onchange="muestraInput(this.value)" id="conocido">
                                 <option disabled>¿Cómo me has conocido?</option>
                                 <option value="amigo">A través de un amigo</option>
                                 <option value="google">Buscando en Google</option>
                                 <option value="rrss">Desde las redes sociales</option>
                                 <option value="otros">Otros</option>
                             </select>
-                            <input type="text" name"telf" placeholder="654 321 098" pattern="(\+34( )*)?[6789]([0-9 ]){8,12}">
+                            <input type="text" id="telf" name"telf" placeholder="654 321 098" pattern="(\+34( )*)?[6789]([0-9 ]){8,12}">
                             <textarea name="mensaje" id="msg" cols="30" rows="10">Escribe aquí tu mensaje</textarea>
                             <p>Te quedan <b id="quedanPalabras">150</b> palabras</p>
                             <input type="submit" value="Enviar">
