@@ -41,12 +41,23 @@ $(document).ready(function () {
         } // End if
     });
     $("form").on('submit', function (event) {
+        // Expresiones regulares para el comentario
+        var primerBlanco = /^ /;
+        var ultimoBlanco = / $/;
+        var variosBlancos = /[ ]+/g;
+
+        // Elementos del DOM para validación y envío del formulario
         var nombre = $("#nombre")[0];
         var email = $('#email')[0];
         var phone = $('#telf')[0];
         var conocido = $('#conocido');
         var comentario = $('#msg').val();
+
+        comentario = comentario.replace(variosBlancos, " ");
+        comentario = comentario.replace(ultimoBlanco, "");
+        comentario = comentario.replace(primerBlanco, "");
         var palabras = comentario.split(" ").length;
+
         if(palabras > 150){            
             event.preventDefault();
             alert("El mensaje no puede contener más de 150 palabras");
@@ -62,6 +73,12 @@ $(document).ready(function () {
 
         
     });
+});
+
+$('#msg').on('keydown', function () {
+    var palabras = $('#msg').val().replace(/[ ]+/g," ").replace(/ $/, "").replace(/^ /, "").split(" ");
+    var resto = 150 - palabras.length;
+    $('#quedanPalabras').text(resto);
 });
 
 $(document).on('scroll', function () {
@@ -101,8 +118,3 @@ $(document).on('scroll', function () {
     }
 });
 
-$('#msg').on('keydown', function () {
-    var palabras = $('#msg').val().split(" ");
-    var resto = 150 - palabras.length;
-    $('#quedanPalabras').text(resto);
-});
